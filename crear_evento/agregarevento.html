@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asignación de recursos</title>
+    <link rel="stylesheet" href="../public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://intranet-dev.itson.edu.mx/templateITSON/Administrativos/css/sb-admin-2.css">
+    <script src="../public/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar" style="z-index: 90">
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/RecursosHumanos/Sitio">
+                <div class="sidebar-brand-icon">
+                    <!--NOMBRE DEL SISTEMA ITSON -->
+                </div>
+            </a>
+            <img height="85" src="/Assets/Img/logo_potros.png">
+            <br>
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/Inicio/Inicio">
+                <div class="sidebar-brand-icon">
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                </div>
+            </a>
+            <div id="menu">
+
+        <li class="nav-item">
+            <a class="nav-link" href="/Modulos/Modulos">
+                <i class="fa fa-folder"></i>
+                <span>Módulos</span>
+            </a>
+            
+
+            <a class="nav-link" href="/Usuarios/Usuarios">
+                <i class="fa fa-folder"></i>
+                <span>Usuarios</span>
+            </a>
+
+            <a class="nav-link" href="/PantallasExtras/PantallaExtras">
+                <i class="fa fa-folder"></i>
+                <span>Pantalla Extras</span>
+            </a>
+
+            <a class="nav-link" href="/RolesUsuarios/Roles">
+            <i class="fa fa-folder"></i>
+            <span>Roles</span>
+        </a>
+        </li>
+
+</div>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider d-none d-md-block">
+
+        <!-- Sidebar Toggler (Sidebar) -->
+        <div class="text-center d-none d-md-inline">
+            <button class="rounded-circle border-0" id="sidebarToggle"></button>
+        </div>
+
+        </ul>
+        <!-- End of Sidebar -->
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <div class="input-group">
+                        <strong>Plantilla</strong>
+                    </div>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style=" padding: 5px 0">
+                                <i class="fa fa-bell fa-lg" style="color:#006db6 !important;"></i>
+                                <!-- Counter - Alerts -->
+                                <span class="badge badge-danger badge-counter">3+</span>
+                            </a>
+                            <!-- Dropdown - Alerts -->
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
+                                <h6 class="dropdown-header">
+                                    Alerts Center
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-primary">
+                                            <i class="fas fa-file-alt text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 12, 2019</div>
+                                        <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                                    </div>
+                                </a>
+
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item no-arrow mx-1">
+                            <a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal">
+                                <i class="fa fa-sign-out-alt fa-lg" style="color:#006db6 !important;"></i>
+                            </a>
+                        </li>
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a id="ImgEmpleado" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span id="spnNombreEmpleado" class="mr-2 d-none d-lg-inline text-gray-600 small"></span>
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Cerrar sesión
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                <center>
+                <h2>Bienvenido</h2>
+                </center>
+                <!--Contenedor del formulario /// etiqueta que junta al formulario fue borrada, pero será agregada-->
+               
+                    <!--Inicio formulario general-->    
+
+                    <!--Seleccionar materia-->
+                    <div>
+                        <label for="" class="form-label">Materia:</label>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Seleccionar Una Materia</option>
+                            <option value="1">Programación 1</option>
+                            <option value="2">Programación 2</option>
+                            <option value="3">Natación adultos</option>
+                            <option value="4">Natación niños</option>
+                        </select>
+                    </div>
+
+                    <!--Clave del grupo-->
+                    <div>
+                        <label for="" class="form-label">Grupo:</label>
+                        <input type="text" class="form-control" placeholder="Ejem: NA10">
+                    </div>
+
+                    <!--Seleccionar estado del evento-->
+                    <div>
+                        <label for="" class="form-label">Estado actual del evento:</label>
+                        <select name="estado-list" id="" class="form-select">
+                            <option selected>Seleccionar un estado del evento</option>
+                            <option value="1">Cancelado</option>
+                            <option value="2">En programación</option>
+                            <option value="3">Publicación</option>
+                        </select>
+                    
+                    </div>
+
+                    <!--Sección de fechas de inscripción-->
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label for="fechaInicio" class="form-label">Inicio inscripciones</label>
+                            <input type="date" name="fechaInicio" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-6">
+                            <label for="" class="form-label">Fin inscripciones</label>
+                            <input type="date" name="" id="" class="form-control">
+                        </div>
+                    </div>
+
+                    <!--Sección máximo y mínimo de participantes-->
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <label for="" class="form-label">Máximo de participantes:</label>
+                            <input type="number" class="form-control" placeholder="0">
+                        </div>
+                        <div class="col-sm-3">
+                            <label for="" class="form-label">Mínimo de participantes:</label>
+                            <input type="number" class="form-control" placeholder="0">
+                        </div>
+                    </div>
+
+                    <!--Sección fecha de inicio y fin de eventos-->
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label for="" class="form-label">Fecha inicio del evento</label>
+                            <input type="date" name="" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-6">
+                            <label for="" class="form-label">Fecha fin del evento</label>
+                            <input type="date" name="" id="" class="form-control">
+                        </div>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" name="" id="" class="form-check-input">
+                        <label for="" class="form-check-label">¿Acepta excentos de pagos?</label>
+                    </div>
+
+                    <div>
+                        <label for="" class="form-label">Descripción del evento</label>
+                        <textarea name="" id="" class="form-control" placeholder="Comentarios acerca del evento..."></textarea>
+                    </div>
+                    <!--Fin formulario general-->
+                    
+                    <hr/>
+
+                    <!--Inicio Conceptos de banco--> 
+                    
+                    <!--Seleccionar Banco-->
+                    <div>
+                        <label for="" class="form-label">Banco:</label>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Seleccionar Un Banco</option>
+                            <option value="1">SANTANDER</option>
+                            <option value="2">BBVA</option>
+                            <option value="3">BANAMEX</option>
+                        </select>
+                    </div>
+
+                    <!--Seleccionar Concepto-->
+                    <div>
+                        <label for="" class="form-label">Concepto:</label>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Seleccionar Un Concepto</option>
+                            <option value="1">30125</option>
+                            <option value="2">98893</option>
+                            <option value="3">00001</option>
+                        </select>
+                    </div>
+
+                    <!--Descripción del concepto delbanco-->
+                    <div>
+                        <label for="" class="form-label">Descripción del Concepto</label>
+                        <textarea name="" id="" class="form-control" placeholder="Comentario del concepto..."></textarea>
+                    </div>
+
+                    <!--Fecha inicio y fecha final del pago-->
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label for="" class="form-label">Fecha inicio del pago</label>
+                            <input type="date" name="" id="" class="form-control">
+                        </div>
+                        <div class="col-sm-6">
+                            <label for="" class="form-label">Fecha fin del pago</label>
+                            <input type="date" name="" id="" class="form-control">
+                        </div>
+                    </div>
+
+                    <!--Fin Conceptos de banco-->  
+
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright © Instituto Tecnológico de Sonora 2025. Versión 1.0.0</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+    </div>
+</body>
+</html>
