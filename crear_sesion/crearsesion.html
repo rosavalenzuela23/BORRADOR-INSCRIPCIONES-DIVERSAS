@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asignación de recursos</title>
+    <title>Crear Sesión</title>
     <link rel="stylesheet" href="../public/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://intranet-dev.itson.edu.mx/templateITSON/Administrativos/css/sb-admin-2.css">
-    <script src="../public/js/bootstrap.min.js"></script> 
+    <script src="../public/js/bootstrap.min.js"></script>
 </head>
 <body>
     <div id="wrapper">
@@ -144,157 +144,127 @@
                
                     <!--Inicio formulario general-->    
 
-                    <!--Seleccionar materia-->
+                    <!--Seleccionar evento para la sesión-->
                     <div>
-                        <label for="" class="form-label">Materia:</label>
+                        <label for="" class="form-label">Evento:</label>
                         <select class="form-select" aria-label="Default select example">
-                            <option selected>Materia</option>
-                            <option value="1">Programación 1</option>
+                            <option value="1">Natación adultos</option>
                             <option value="2">Programación 2</option>
-                            <option value="3">Natación adultos</option>
-                            <option value="4">Natación niños</option>
                         </select>
                     </div>
 
-                    <!--Clave del grupo-->
+                    <!--Seleccionar clave del evento-->
                     <div>
                         <label for="" class="form-label">Grupo:</label>
-                        <input type="text" class="form-control" placeholder="Ejem: NA10">
-                    </div>
-
-                    <!--Seleccionar estado del evento-->
-                    <div>
-                        <label for="" class="form-label">Estado actual del evento:</label>
-                        <select name="estado-list" id="" class="form-select">
-                            <option selected>Estado Evento</option>
-                            <option value="1">Cancelado</option>
-                            <option value="2">En programación</option>
-                            <option value="3">Publicación</option>
+                        <select class="form-select" aria-label="Default select example">
+                            <option value="1">NA-23</option>
+                            <option value="2">PN-13</option>
                         </select>
+                    </div>
+
+                    <hr/>
+
+                    <!--Sección de fechas de inicio de evento y fin de evento-->
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label for="fechaInicio" class="form-label">Inicio De Evento</label>
+                            <input type="text" name="fechaInicio" id="" class="form-control" value="10/06/2025" disabled>
+                        </div>
+                        <div class="col-sm-6">
+                            <label for="" class="form-label">Fin De Evento</label>
+                            <input type="text" name="" id="" class="form-control" value="10/07/2025" disabled>
+                        </div>
+                    </div>
+
                     
+
+                    <!--Sección días que se impartirá la sesión-->
+                    <div class="d-flex justify-content-center row mt-4">
+                        <label for="" class="form-label col-sm-6 mr-2">Dias:</label>
+                        <div class="col-sm-6">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                            <label class="form-check-label" for="inlineCheckbox1">L</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                            <label class="form-check-label" for="inlineCheckbox2">M</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                            <label class="form-check-label" for="inlineCheckbox3">MI</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option4">
+                            <label class="form-check-label" for="inlineCheckbox2">j</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option5">
+                            <label class="form-check-label" for="inlineCheckbox2">V</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option6">
+                            <label class="form-check-label" for="inlineCheckbox2">S</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option7">
+                            <label class="form-check-label" for="inlineCheckbox2">D</label>
+                        </div>
+                        </div>
+
                     </div>
 
-                    <!--Sección de fechas de inscripción-->
+                    <hr/>
+
+                    <!--Sección fecha de inicio y fin de sesión-->
                     <div class="row">
                         <div class="col-sm-6">
-                            <label for="fechaInicio" class="form-label">Inicio inscripciones</label>
-                            <input type="date" name="fechaInicio" id="" class="form-control">
+                            <label for="fechaInicio" class="form-label">Inicio De Sesión</label>
+                            <input type="text" name="fechaInicio" id="" class="form-control" value="10/06/2025" disabled>
                         </div>
                         <div class="col-sm-6">
-                            <label for="" class="form-label">Fin inscripciones</label>
-                            <input type="date" name="" id="" class="form-control">
+                            <label for="" class="form-label">Fin De Sesion</label>
+                            <input type="text" name="" id="" class="form-control" value="10/07/2025" disabled>
                         </div>
                     </div>
 
-                    <!--Sección máximo y mínimo de participantes-->
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <label for="" class="form-label">Máximo de participantes:</label>
-                            <input type="number" class="form-control" placeholder="0">
-                        </div>
-                        <div class="col-sm-3">
-                            <label for="" class="form-label">Mínimo de participantes:</label>
-                            <input type="number" class="form-control" placeholder="0">
-                        </div>
-                    </div>
-
-                    <!--Sección fecha de inicio y fin de eventos-->
+                    <!--Sección inicio y fin de hora de sesión-->
                     <div class="row">
                         <div class="col-sm-6">
-                            <label for="" class="form-label">Fecha inicio del evento</label>
-                            <input type="date" name="" id="" class="form-control">
+                            <label for="fechaInicio" class="form-label">Hora De Inicio</label>
+                            <input type="time" name="fechaInicio" id="" class="form-control">
                         </div>
                         <div class="col-sm-6">
-                            <label for="" class="form-label">Fecha fin del evento</label>
-                            <input type="date" name="" id="" class="form-control">
+                            <label for="" class="form-label">Hora De Fin</label>
+                            <input type="time" name="" id="" class="form-control">
                         </div>
                     </div>
-
-                    <!--Sección de aceptar o no excentos-->
+                    
+                    <!--Se-->
                     <div>
-                        <input type="checkbox" name="" id="" class="form-check-input">
-                        <label for="" class="form-check-label">¿Acepta excentos de pagos?</label>
+                        <label for="" class="form-label">Evento:</label>
+                        <select class="form-select" aria-label="Default select example">
+                            <option value="1">Natación adultos</option>
+                            <option value="2">Programación 2</option>
+                        </select>
                     </div>
 
-                    <!--Sección descripción del evento-->
+                    <!--Seleccionar clave del evento-->
                     <div>
-                        <label for="" class="form-label">Descripción del evento</label>
-                        <textarea name="" id="" class="form-control" placeholder="Comentarios..."></textarea>
+                        <label for="" class="form-label">Grupo:</label>
+                        <select class="form-select" aria-label="Default select example">
+                            <option value="1">NA-23</option>
+                            <option value="2">PN-13</option>
+                        </select>
                     </div>
                     <!--Fin formulario general-->
                     
-                    <hr/>
-
-                    <!--Inicio Tipo de calificación para los departamentos que lo necesiten-->
-                    <div class="accordion accordion-flush" id="accordionFlushExample">
-                        <div class="accordion-item">
-                          <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                              Tipo De Calificación
-                            </button>
-                          </h2>
-                          <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                            <div>
-                                <label for="" class="form-label">Calificación a utilizar:</label>
-                                <select class="form-select" aria-label="Default select example">
-                                    <option value="1">LETRAS</option>
-                                    <option value="2">NÚMEROS</option>
-                                    
-                                </select>
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-                    <!--Fin Tipo de calificación para los departamentos que lo necesiten-->
-
-                    <hr/>
-
-                    <!--Inicio Conceptos de banco--> 
                     
-                    <!--Seleccionar Banco-->
-                    <div>
-                        <label for="" class="form-label">Banco:</label>
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Banco</option>
-                            <option value="1">SANTANDER</option>
-                            <option value="2">BBVA</option>
-                            <option value="3">BANAMEX</option>
-                        </select>
-                    </div>
 
-                    <!--Seleccionar Concepto-->
-                    <div>
-                        <label for="" class="form-label">Concepto:</label>
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Concepto</option>
-                            <option value="1">30125</option>
-                            <option value="2">98893</option>
-                            <option value="3">00001</option>
-                        </select>
-                    </div>
-
-                    <!--Descripción del concepto delbanco-->
-                    <div>
-                        <label for="" class="form-label">Descripción del Concepto</label>
-                        <textarea name="" id="" class="form-control" placeholder="Comentarios"></textarea>
-                    </div>
-
-                    <!--Fecha inicio y fecha final del pago-->
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <label for="" class="form-label">Fecha inicio del pago</label>
-                            <input type="date" name="" id="" class="form-control">
-                        </div>
-                        <div class="col-sm-6">
-                            <label for="" class="form-label">Fecha fin del pago</label>
-                            <input type="date" name="" id="" class="form-control">
-                        </div>
-                    </div>
-
-                    <!--Fin Conceptos de banco--> 
+                  
                 
-                    <div class="row flex-row-reverse">
-                        <input type="button" value="Registrar Evento" class="btn btn-success col-sm-2">
+                    <div class="row flex-row-reverse mt-4">
+                        <input type="button" value="Registrar Sesión" class="btn btn-success col-sm-2">
                     </div>
                     
 
