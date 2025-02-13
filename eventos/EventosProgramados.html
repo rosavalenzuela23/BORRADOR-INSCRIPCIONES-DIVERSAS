@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos programados</title>
+
+    <link rel="stylesheet" href="../public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://intranet-dev.itson.edu.mx/templateITSON/Administrativos/css/sb-admin-2.css">
+    <script src="../public/js/bootstrap.min.js"></script>
+
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion vh-100" id="accordionSidebar"
+            style="z-index: 90">
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/RecursosHumanos/Sitio">
+                <div class="sidebar-brand-icon">
+                    <!--NOMBRE DEL SISTEMA ITSON -->
+                </div>
+            </a>
+
+            <img height="85" src="/Assets/Img/logo_potros.png">
+            <br>
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/Inicio/Inicio">
+                <div class="sidebar-brand-icon">
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                </div>
+            </a>
+            <div id="menu">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/Modulos/Modulos">
+                        <i class="fa fa-folder"></i>
+                        <span>Módulos</span>
+                    </a>
+
+
+                    <a class="nav-link" href="/Usuarios/Usuarios">
+                        <i class="fa fa-folder"></i>
+                        <span>Usuarios</span>
+                    </a>
+
+                    <a class="nav-link" href="/PantallasExtras/PantallaExtras">
+                        <i class="fa fa-folder"></i>
+                        <span>Pantalla Extras</span>
+                    </a>
+
+                    <a class="nav-link" href="/RolesUsuarios/Roles">
+                        <i class="fa fa-folder"></i>
+                        <span>Roles</span>
+                    </a>
+                </li>
+
+            </div>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+        </ul>
+        <!-- End of Sidebar -->
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="vh-100">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <div class="input-group">
+                        <strong>Eventos programados</strong>
+                    </div>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                style=" padding: 5px 0">
+                                <i class="fa fa-bell fa-lg" style="color:#006db6 !important;"></i>
+                                <!-- Counter - Alerts -->
+                                <span class="badge badge-danger badge-counter">3+</span>
+                            </a>
+                            <!-- Dropdown - Alerts -->
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="alertsDropdown">
+                                <h6 class="dropdown-header">
+                                    Alerts Center
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-primary">
+                                            <i class="fas fa-file-alt text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 12, 2019</div>
+                                        <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                                    </div>
+                                </a>
+
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item no-arrow mx-1">
+                            <a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal">
+                                <i class="fa fa-sign-out-alt fa-lg" style="color:#006db6 !important;"></i>
+                            </a>
+                        </li>
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a id="ImgEmpleado" class="nav-link dropdown-toggle" href="#" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span id="spnNombreEmpleado" class="mr-2 d-none d-lg-inline text-gray-600 small"></span>
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Cerrar sesión
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="vh-100 col">
+                            <div class="row">
+                                <div class="col-12">
+                                    <!-- Buscador -->
+
+                                    <div class="form-group">
+                                        <label for="buscador" class="form-label">Buscar por nombre</label>
+                                        <input type="text" class="form-control" name="buscador"
+                                            placeholder="Nombre del evento" tabindex="1" />
+                                    </div>
+
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="accordion" id="accordionFactura">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseOne" aria-expanded="false"
+                                                    aria-controls="collapseOne">Busqueda avanzada</button>
+                                            </h2>
+
+                                            <div id="collapseOne" class="accordion-collapse collapse"
+                                                data-bs-parent="#accordionFactura">
+
+                                                <div class="container-fluid py-3">
+                                                    <h4>Por fechas</h4>
+                                                    <div class="form-group mt-3">
+                                                        <!-- fecha inicio -->
+                                                        <label for="fecha-inicio" class="form-label">Fecha de
+                                                            inicio</label>
+                                                        <input type="date" class="form-control" name="fecha-inicio">
+                                                    </div>
+
+                                                    <!-- fecha final  -->
+                                                    <div class="form-group mt-3">
+                                                        <label for="fecha-final" class="form-label">Fecha final</label>
+                                                        <input type="date" class="form-control" name="fecha-final">
+                                                    </div>
+
+                                                    <!-- Tipo de vento -->
+                                                    <h4>Por tipo de evento</h4>
+                                                    <div class="form-group mt-3">
+                                                        <label for="tipo-evento" class="form-label">Tipo</label>
+                                                        <select type="text" class="form-select" name="tipo-evento">
+                                                            <option value="1">Evento 1</option>
+                                                            <option value="2">Evento 2</option>
+                                                            <option value="3">Evento 3</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- busqueda -->
+
+                                <div class="col">
+
+                                    <div class="form-group text-center">
+                                        <label for="cantidad-pagina" class="form-label">Cantidad de registros por
+                                            pagina</label>
+                                        <select name="cantidad-pagina" id="cantidad-pagina"
+                                            class="form-select text-center" tabindex="2">
+                                            <option value="10">10</option>
+                                            <option value="20">20</option>
+                                            <option value="30">30</option>
+                                            <option value="40">40</option>
+                                            <option value="50">50</option>
+                                            <option value="60">60</option>
+                                            <option value="70">70</option>
+                                            <option value="80">80</option>
+                                            <option value="90">90</option>
+                                            <option value="100">100</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+
+                                <div class="col">
+                                    <div class="form-group mt-3">
+                                        <div class="form-check form-check-inline">
+                                            <input type="radio" name="estatus-evento" class="form-check-input">
+                                            <label for="estatus-evento" class="form-chack-label">
+                                                Eventos finalizados
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input type="radio" name="estatus-evento" class="form-check-input" checked>
+                                            <label for="estatus-evento" class="form-chack-label">
+                                                Eventos actuales
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input type="radio" name="estatus-evento" class="form-check-input">
+                                            <label for="estatus-evento" class="form-chack-label">
+                                                Todos
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col d-flex mt-3 justify-content-end align-items-center">
+                                    <button class="btn btn-success" tabindex="3">Realizar busqueda</button>
+                                </div>
+
+                                <!-- fin de la busqueda -->
+
+                            </div>
+
+                            <div class="row" id="botonesTop">
+                                <nav aria-label="Botones de navegación">
+                                    <ul class="pagination">
+                                        <li class="page-item"><button class="page-link">Pagina anterior</button></li>
+                                        <li class="page-item"><button class="page-link">1</button></li>
+                                        <li class="page-item"><button class="page-link">2</button></li>
+                                        <li class="page-item"><button class="page-link">3</button></li>
+                                        <li class="page-item"><button class="page-link">4</button></li>
+                                        <li class="page-item"><button class="page-link">5</button></li>
+                                        <li class="page-item"><button class="page-link">Pagina siguiente</button></li>
+                                    </ul>
+                                </nav>
+                            </div>
+
+                            <div class="contenido-registros">
+
+                                
+
+                            </div>
+
+                            <div class="row" id="botonesBottom">
+                                <nav aria-label="Botones de navegación">
+                                    <ul class="pagination">
+                                        <li class="page-item"><button class="page-link">Pagina anterior</button></li>
+                                        <li class="page-item"><button class="page-link">1</button></li>
+                                        <li class="page-item"><button class="page-link">2</button></li>
+                                        <li class="page-item"><button class="page-link">3</button></li>
+                                        <li class="page-item"><button class="page-link">4</button></li>
+                                        <li class="page-item"><button class="page-link">5</button></li>
+                                        <li class="page-item"><button class="page-link">Pagina siguiente</button></li>
+                                    </ul>
+                                </nav>
+                            </div>
+
+                            <footer class="my-3 sticky-bottom bg-white">
+                                <div>
+                                    <div class="copyright text-center">
+                                        <span>Copyright © Instituto Tecnológico de Sonora 2025. Versión 1.0.0</span>
+                                    </div>
+                                </div>
+                            </footer>   
+
+                        </div>
+                    </div>
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+
+        </div>
+        <!-- End of Content Wrapper -->
+    </div>
+
+</body>
+
+</html>
