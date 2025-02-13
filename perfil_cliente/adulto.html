@@ -7,198 +7,403 @@
     <title>Información cliente</title>
     <link rel="stylesheet" href="../public/css/bootstrap.min.css">
     <link rel="stylesheet" href="../public/itsoncss/sidebar.css">
+    <link rel="stylesheet" href="https://intranet-dev.itson.edu.mx/templateITSON/Administrativos/css/sb-admin-2.css">
+    <script src="../public/js/bootstrap.min.js"></script>
 </head>
 
 <body>
 
-    <div class="container-fluid vh-100">
-        <div class="row" id="contenido">
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar" style="z-index: 90">
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/RecursosHumanos/Sitio">
+                <div class="sidebar-brand-icon">
+                    <!--NOMBRE DEL SISTEMA ITSON -->
+                </div>
+            </a>
+            <img height="85" src="/Assets/Img/logo_potros.png">
+            <br>
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/Inicio/Inicio">
+                <div class="sidebar-brand-icon">
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                </div>
+            </a>
+            <div id="menu">
 
-            <!-- dashboard -->
-            <div class="col-2 vh-100 bg-gradient-primary shadow-lg">
+        <li class="nav-item">
+            <a class="nav-link" href="/Modulos/Modulos">
+                <i class="fa fa-folder"></i>
+                <span>Módulos</span>
+            </a>
+            
 
-a
+            <a class="nav-link" href="/Usuarios/Usuarios">
+                <i class="fa fa-folder"></i>
+                <span>Usuarios</span>
+            </a>
 
-            </div>
+            <a class="nav-link" href="/PantallasExtras/PantallaExtras">
+                <i class="fa fa-folder"></i>
+                <span>Pantalla Extras</span>
+            </a>
 
-            <div class="container-fluid vh-100 overflow-y-auto col-10">
+            <a class="nav-link" href="/RolesUsuarios/Roles">
+            <i class="fa fa-folder"></i>
+            <span>Roles</span>
+        </a>
+        </li>
 
-                <div class="row">
-                    <div class="col-4 mb-3">
-                        <!-- Información cliente -->
-    
-                        <div class="informacion-cliente">
-    
-                            <div class="mt-3 style=" background-color: grey;">
-                                <label for="curp-cliente" class="form-label">
-                                    (*)CURP:
-                                </label>
-                                <div class="input-group">
-                                    <input type="text" class="form-control" id="curp-cliente" placeholder="CURP">
-                                    <button class="btn btn-primary" id="boton-curp">Validar curp</button>
+</div>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider d-none d-md-block">
+
+        <!-- Sidebar Toggler (Sidebar) -->
+        <div class="text-center d-none d-md-inline">
+            <button class="rounded-circle border-0" id="sidebarToggle"></button>
+        </div>
+
+        </ul>
+        <!-- End of Sidebar -->
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <div class="input-group">
+                        <strong>Plantilla</strong>
+                    </div>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style=" padding: 5px 0">
+                                <i class="fa fa-bell fa-lg" style="color:#006db6 !important;"></i>
+                                <!-- Counter - Alerts -->
+                                <span class="badge badge-danger badge-counter">3+</span>
+                            </a>
+                            <!-- Dropdown - Alerts -->
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
+                                <h6 class="dropdown-header">
+                                    Alerts Center
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-primary">
+                                            <i class="fas fa-file-alt text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 12, 2019</div>
+                                        <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                                    </div>
+                                </a>
+
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item no-arrow mx-1">
+                            <a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal">
+                                <i class="fa fa-sign-out-alt fa-lg" style="color:#006db6 !important;"></i>
+                            </a>
+                        </li>
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a id="ImgEmpleado" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span id="spnNombreEmpleado" class="mr-2 d-none d-lg-inline text-gray-600 small"></span>
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Cerrar sesión
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+                    <div class="row" id="contenido">
+            
+                        <div class="vh-100 col">
+            
+                            <div class="row">
+                                <div class="col-4 mb-3">
+                                    <!-- Información cliente -->
+            
+                                    <div class="informacion-cliente">
+            
+                                        <div class="mt-3 style=" background-color: grey;">
+                                            <label for="curp-cliente" class="form-label">
+                                                (*)CURP:
+                                            </label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" id="curp-cliente" placeholder="CURP">
+                                                <button class="btn btn-primary" id="boton-curp">Validar curp</button>
+                                            </div>
+                                        </div>
+            
+                                        <!-- nombre del cliente -->
+                                        <div class="mb-3">
+                                            <label for="nombre-cliente" class="form-label">Nombre: </label>
+                                            <input type="text" class="form-control" id="nombre-cliente"
+                                                placeholder="Nombre del cliente">
+                                        </div>
+            
+                                        <!-- apellido paterno-->
+                                        <div class="mb-3">
+                                            <label for="apellido-paterno-cliente" class="form-label">
+                                                Apellido paterno
+                                            </label>
+                                            <input type="text" class="form-control" id="apellido-paterno-cliente"
+                                                placeholder="Apellido paterno">
+                                        </div>
+            
+                                        <!-- apellido materno -->
+                                        <div class="mb-3">
+                                            <label for="apellido-materno-cliente" class="form-label">
+                                                Apellido materno
+                                            </label>
+                                            <input type="text" placeholder="Apellido materno" id="apellido-materno-cliente"
+                                                class="form-control">
+                                        </div>
+            
+            
+            
+                                    </div>
+                                </div>
+            
+                                <div class="col-8 d-flex align-items-center justify-content-center">
+                                    <!-- imagen-cliente -->
+            
+                                    <img src="../public/imagenes/person-bounding-box.svg" alt="IMAGEN CLIENT" class="img-fluid"
+                                        style="height: 100px; width: 100px">
+            
                                 </div>
                             </div>
-    
-                            <!-- nombre del cliente -->
-                            <div class="mb-3">
-                                <label for="nombre-cliente" class="form-label">Nombre: </label>
-                                <input type="text" class="form-control" id="nombre-cliente"
-                                    placeholder="Nombre del cliente">
+            
+                            <hr>
+            
+                            <!-- siguiente renglon -->
+                            <div class="row">
+            
+                                <div class="col">
+                                    <div class="mb-3">
+                                        <label for="direccion-cliente" placeholder="Dirección" class="form-label">
+                                            (*)Dirección
+                                        </label>
+                                        <input type="text" class="form-control" id="direccion-cliente" placeholder="Dirección">
+                                    </div>
+                                </div>
+            
+                                <div class="col">
+                                    <div class="mb-3">
+                                        <label for="ciudad-cliente" class="form-label">(*)Ciudad</label>
+                                        <input type="text" placeholder="Ciudad" id="ciudad-cliente" class="form-control">
+                                    </div>
+                                </div>
+            
+                                <div class="col">
+                                    <div class="mb-3">
+                                        <label for="ciudades-select" class="form-label">(*)Estado</label>
+                                        <select name="ciudades-selet" class="form-select">
+                                            <option value="1">Sonora</option>
+                                            <option value="2">Baja California</option>
+                                            <option value="3">Baja California sur</option>
+                                        </select>
+                                    </div>
+                                </div>
+            
                             </div>
-    
-                            <!-- apellido paterno-->
-                            <div class="mb-3">
-                                <label for="apellido-paterno-cliente" class="form-label">
-                                    Apellido paterno
-                                </label>
-                                <input type="text" class="form-control" id="apellido-paterno-cliente"
-                                    placeholder="Apellido paterno">
+            
+                            <!-- siguiente renglon -->
+                            <div class="row">
+                                <div class="col">
+                                    <div class="mb-3">
+                                        <label class="form-label" for="numero-cliente">(*)Número de teléfono</label>
+                                        <input type="number" id="numero-cliente" placeholder="Número del cliente"
+                                            class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="mb-3">
+                                        <label for="nombre-contacto-emergencia" class="form-label">Nombre contacto
+                                            emergencia</label>
+                                        <input type="text" for="nombre-conctacto-emergencia"
+                                            placeholder="Nombre del contacto de emergencia" class="form-control"
+                                            id="nombre-contacto-emergencia">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="mb-3">
+                                        <label for="telefono-contacto-emergencia" class="form-label">Teléfono contacto
+                                            emergencia</label>
+                                        <input type="number" id="telefono-contacto-emergencia" placeholder="Número de teléfono"
+                                            class="form-control">
+                                    </div>
+                                </div>
                             </div>
-    
-                            <!-- apellido materno -->
-                            <div class="mb-3">
-                                <label for="apellido-materno-cliente" class="form-label">
-                                    Apellido materno
-                                </label>
-                                <input type="text" placeholder="Apellido materno" id="apellido-materno-cliente"
-                                    class="form-control">
+            
+                            <hr>
+            
+                            <div class="row">
+                                <div class="col">
+                                    <label for="email-cliente" class="form-label">Correo electronico</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">
+                                            @
+                                        </span>
+                                        <input type="text" class="form-control" name="email-cliente"
+                                            placeholder="cliente@direccion.com">
+                                    </div>
+                                </div>
                             </div>
-    
-    
-    
+            
+                            <hr>
+            
+                            <div class="row">
+            
+                                <div class="col">
+                                    <label for="tipo-sangre" class="form-label">Tipo de sangre</label>
+                                    <select name="tipo-sangre" class="form-select">
+                                        <option value="null" selected>SELECCIONE TIPO DE SANGRE</option>
+                                        <option value="1">0+</option>
+                                        <option value="2">0-</option>
+                                        <option value="3">A+</option>
+                                        <option value="4">A-</option>
+                                        <option value="5">B+</option>
+                                        <option value="6">B-</option>
+                                        <option value="7">AB+</option>
+                                        <option value="8">AB-</option>
+                                    </select>
+                                </div>
+            
+                                <div class="col">
+                                    <label for="seguros" class="form-label">Seguro médico</label>
+                                    <select class="form-select" name="seguros">
+                                        <option value="1">IMSS</option>
+                                        <option value="2">ISSTE</option>
+                                        <option value="3">Otro seguro</option>
+                                    </select>
+                                </div>
+                            </div>
+            
+                            <div class="accordion mt-5" id="accordionFactura">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                            aria-expanded="false" aria-controls="collapseOne">Datos de facturación</button>
+                                    </h2>
+            
+                                    <div id="collapseOne" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionFactura">
+            
+                                        <div class="container-fluid">
+                                            <div class="form-group mt-3">
+                                                <!-- rfc -->
+                                                <label for="RFC" class="form-label">RFC</label>
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control" name="RFC"
+                                                        placeholder="RFC del contribuyente">
+                                                    <button class="btn btn-primary">Validar RFC</button>
+                                                </div>
+            
+                                            </div>
+            
+                                            <!-- razon social  -->
+                                            <div class="form-group mt-3">
+                                                <label for="razon-social" class="form-label">Razón social</label>
+                                                <input type="text" class="form-control" name="razon-social"
+                                                    placeholder="Razón social">
+                                            </div>
+            
+                                            <!-- direccion fiscal -->
+                                            <div class="form-group mt3">
+                                                <label for="direccion-fiscal" class="form-label">Dirección fiscal</label>
+                                                <input type="text" class="form-control" name="direccion-fiscal" placeholder="Dirección fiscal">
+                                            </div>
+                                            <!-- ciudad/estado -->
+                                            <div class="form-group mt3">
+                                                <label for="ciudad-estado" class="form-label">Ciudad/Estado</label>
+                                                <input type="text" class="form-control" name="ciudad-estado" placeholder="Ciudad y estado">
+                                            </div>
+                                            <!-- telefono y monto a facturar -->
+            
+                                            <div class="row">
+                                                <div class="form-group mt-3 col-6">
+                                                    <label for="telefono-factura" class="form-label">Teléfono</label>
+                                                    <input type="text" class="form-control" name="telefono-factura" placeholder="Teléfono"> 
+                                                </div>
+                
+                                                <div class="form-group mt-3 col-6">
+                                                    <label for="monto-factura" class="form-label">Monto a facturar</label>
+            
+                                                    <div class="input-group">
+                                                        <p class="input-group-text">$</p>
+                                                        <input type="number" class="form-control" name="monto-factura">
+                                                    </div>
+                                                </div>
+                                            </div>
+            
+                                    
+                                        </div>
+            
+                                    </div>
+            
+                                </div>
+                            </div>
+            
+                            <!-- ultimo renglon -->
+                            <div class="row mt-5 mb-5">
+                                <div class="col d-flex align-items-center justify-content-end">
+                                    <button class="btn me-3 nav-underline">
+                                        <u>Cancelar</u>
+                                    </button>
+                                    <button class="btn btn-outline-secondary me-3">Inscribir alumno</button>
+                                    <button class="btn btn-success">Guardar información</button>
+                                </div>
+                            </div>
+            
                         </div>
-                    </div>
-    
-                    <div class="col-8 d-flex align-items-center justify-content-center">
-                        <!-- imagen-cliente -->
-    
-                        <img src="../public/imagenes/person-bounding-box.svg" alt="IMAGEN CLIENT" class="img-fluid" style="height: 100px; width: 100px">
-    
+            
+            
                     </div>
                 </div>
-
-                <hr>
-
-                <!-- siguiente renglon -->
-                <div class="row">
-
-                    <div class="col">
-                        <div class="mb-3">
-                            <label for="direccion-cliente" placeholder="Dirección" class="form-label">
-                                (*)Dirección
-                            </label>
-                            <input type="text" class="form-control" id="direccion-cliente" placeholder="Dirección">
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="mb-3">
-                            <label for="ciudad-cliente" class="form-label">(*)Ciudad</label>
-                            <input type="text" placeholder="Ciudad" id="ciudad-cliente" class="form-control">
-                        </div>
-                    </div>
-
-                    <div class="col">
-                        <div class="mb-3">
-                            <label for="ciudades-select" class="form-label">(*)Estado</label>
-                            <select name="ciudades-selet" class="form-select">
-                                <option value="1">Sonora</option>
-                                <option value="2">Baja California</option>
-                                <option value="3">Baja California sur</option>
-                            </select>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- siguiente renglon -->
-                <div class="row">
-                    <div class="col">
-                        <div class="mb-3">
-                            <label class="form-label" for="numero-cliente">(*)Número de teléfono</label>
-                            <input type="number" id="numero-cliente" placeholder="Número del cliente"
-                                class="form-control">
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="mb-3">
-                            <label for="nombre-contacto-emergencia" class="form-label">Nombre contacto
-                                emergencia</label>
-                            <input type="text" for="nombre-conctacto-emergencia"
-                                placeholder="Nombre del contacto de emergencia" class="form-control"
-                                id="nombre-contacto-emergencia">
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="mb-3">
-                            <label for="telefono-contacto-emergencia" class="form-label">Teléfono contacto
-                                emergencia</label>
-                            <input type="number" id="telefono-contacto-emergencia" placeholder="Número de teléfono"
-                                class="form-control">
-                        </div>
-                    </div>
-                </div>
-
-                <hr>
-
-                <div class="row">
-                    <div class="col">
-                        <label for="email-cliente" class="form-label">Correo electronico</label>
-                        <div class="input-group">
-                            <span class="input-group-text">
-                                @
-                            </span>
-                            <input type="text" class="form-control" name="email-cliente" placeholder="cliente@direccion.com">
-                        </div>
-                    </div>
-                </div>
-
-                <hr>
-
-                <div class="row">
-
-                    <div class="col">
-                        <label for="tipo-sangre" class="form-label">Tipo de sangre</label>
-                        <select name="tipo-sangre" class="form-select">
-                            <option value="null" selected>SELECCIONE TIPO DE SANGRE</option>
-                            <option value="1">0+</option>
-                            <option value="2">0-</option>
-                            <option value="3">A+</option>
-                            <option value="4">A-</option>
-                            <option value="5">B+</option>
-                            <option value="6">B-</option>
-                            <option value="7">AB+</option>
-                            <option value="8">AB-</option>
-                        </select>
-                    </div>
-
-                    <div class="col">
-                        <label for="seguros" class="form-label">Seguro médico</label>
-                        <select class="form-select" name="seguros">
-                            <option value="1">IMSS</option>
-                            <option value="2">ISSTE</option>
-                            <option value="3">Otro seguro</option>
-                        </select>
-                    </div>
-                </div>
-
-
-
-                <!-- ultimo renglon -->
-                <div class="row mt-5 mb-5">
-                    <div class="col d-flex align-items-center justify-content-end">
-                        <button class="btn me-3 nav-underline"> 
-                            <u>Cancelar</u>
-                        </button>
-                        <button class="btn btn-outline-secondary me-3">Inscribir alumno</button>
-                        <button class="btn btn-success">Guardar información</button>
-                    </div> 
-                </div>
+                <!-- /.container-fluid -->
 
             </div>
+            <!-- End of Main Content -->
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright © Instituto Tecnológico de Sonora 2025. Versión 1.0.0</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
 
         </div>
-    </div>
+        <!-- End of Content Wrapper -->
+        </div>
+
+    
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
