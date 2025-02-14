@@ -22,7 +22,8 @@
     <div id="wrapper">
 
         <!-- sidebar--ofcanvas -->
-        <div class="offcanvas-lg offcanvas-start bg-gradient-primary" tabindex="-1" aria-labelled="offcanvas" id="offcanvas-sidebar">
+        <div class="offcanvas-lg offcanvas-start bg-gradient-primary" tabindex="-1" aria-labelled="offcanvas"
+            id="offcanvas-sidebar">
             <div class="offcanvas-body">
 
                 <div class="navbar">
@@ -32,7 +33,7 @@
                             <img src="https://www.itson.mx/eventos/cibca/PublishingImages/Paginas/logos/Logo%20ITSON.png"
                                 height="85">
                         </a>
-                        
+
                         <div class="container-fluid">
                             <ul class="navbar-nav flex-column">
                                 <li class="nav-item">
@@ -48,13 +49,14 @@
                                     <a href="#" class="nav-link text-light">Roles</a>
                                 </li>
                                 <li class="nav-item d-lg-none">
-                                    <a href="#offcanvas-sidebar" class="nav-link text-light" data-bs-toggle="offcanvas" role="button" aria-controls="offcanvas-sidebar">Cerrar</a>
+                                    <a href="#offcanvas-sidebar" class="nav-link text-light" data-bs-toggle="offcanvas"
+                                        role="button" aria-controls="offcanvas-sidebar">Cerrar</a>
                                 </li>
                             </ul>
                         </div>
                     </div>
 
-                    
+
                 </div>
 
             </div>
@@ -71,7 +73,8 @@
 
                     <!-- Sidebar Toggle (Topbar) -->
 
-                    <button id="sidebarToggleTop" class="d-lg-none btn me-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-sidebar" aria-controlls="offcanvas-sidebar">
+                    <button id="sidebarToggleTop" class="d-lg-none btn me-3" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvas-sidebar" aria-controlls="offcanvas-sidebar">
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
@@ -204,7 +207,7 @@
 
                                 <!-- busqueda -->
 
-                                <div class="col">
+                                <div class="col-2 my-3">
 
                                     <div class="form-group text-center">
                                         <label for="cantidad-pagina" class="form-label">Cantidad de registros por
@@ -226,7 +229,7 @@
 
                                 </div>
 
-                                <div class="col">
+                                <div class="col d-flex align-items-center justify-content-center my-3">
                                     <div class="form-group mt-3">
                                         <div class="form-check form-check-inline">
                                             <input type="radio" name="estatus-evento" class="form-check-input">
@@ -250,7 +253,7 @@
                                 </div>
 
 
-                                <div class="col d-flex mt-3 justify-content-end align-items-center">
+                                <div class="col-2 d-flex mt-3 justify-content-end align-items-center my-3">
                                     <button class="btn btn-success" tabindex="3">Realizar busqueda</button>
                                 </div>
 
@@ -272,24 +275,441 @@
                                 </nav>
                             </div>
 
-                            <div class="contenido-registros">
-
-
-
+                            <!-- modal de ejemplo -->
+                            <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                                id="avisos-dialog">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Información de los
+                                                eventos</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="container-fluid h-100">
+                                                <div class="row">
+                                                    <button class="btn btn-primary">Alumnos inscritos</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Understood</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+                            <!-- fin del modal de ejemplo -->
 
-                            <div class="row" id="botonesBottom">
-                                <nav aria-label="Botones de navegación">
-                                    <ul class="pagination">
-                                        <li class="page-item"><button class="page-link">Pagina anterior</button></li>
-                                        <li class="page-item"><button class="page-link">1</button></li>
-                                        <li class="page-item"><button class="page-link">2</button></li>
-                                        <li class="page-item"><button class="page-link">3</button></li>
-                                        <li class="page-item"><button class="page-link">4</button></li>
-                                        <li class="page-item"><button class="page-link">5</button></li>
-                                        <li class="page-item"><button class="page-link">Pagina siguiente</button></li>
-                                    </ul>
-                                </nav>
+
+                            <div
+                                class="contenido-registros border border-4 border-primary rounded h-75 overflow-y-auto">
+                                <div class="container-fluid my-3 py-2 text-black" style="background-color: grey;">
+
+                                    <div class="row">
+                                        <div class="col-6">
+                                            Nombre del evento
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="btn btn-info" data-bs-toggle="modal"
+                                                data-bs-target="#avisos-dialog">
+                                                Información
+                                            </button>
+                                        </div>
+
+                                        <div class="col-2">
+                                            <button class="btn btn-warning">Pagos</button>
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="btn btn-success">Inscripciones</button>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="container-fluid my-3 py-2 text-black" style="background-color: grey;">
+
+                                    <div class="row">
+                                        <div class="col-6">
+                                            Nombre del evento
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="btn btn-info">Información</button>
+                                        </div>
+
+                                        <div class="col-2">
+                                            <button class="btn btn-warning">Pagos</button>
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="btn btn-success">Inscripciones</button>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="container-fluid my-3 py-2 text-black" style="background-color: grey;">
+
+                                    <div class="row">
+                                        <div class="col-6">
+                                            Nombre del evento
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="btn btn-info">Información</button>
+                                        </div>
+
+                                        <div class="col-2">
+                                            <button class="btn btn-warning">Pagos</button>
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="btn btn-success">Inscripciones</button>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="container-fluid my-3 py-2 text-black" style="background-color: grey;">
+
+                                    <div class="row">
+                                        <div class="col-6">
+                                            Nombre del evento
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="btn btn-info">Información</button>
+                                        </div>
+
+                                        <div class="col-2">
+                                            <button class="btn btn-warning">Pagos</button>
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="btn btn-success">Inscripciones</button>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="container-fluid my-3 py-2 text-black" style="background-color: grey;">
+
+                                    <div class="row">
+                                        <div class="col-6">
+                                            Nombre del evento
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="btn btn-info">Información</button>
+                                        </div>
+
+                                        <div class="col-2">
+                                            <button class="btn btn-warning">Pagos</button>
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="btn btn-success">Inscripciones</button>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="container-fluid my-3 py-2 text-black" style="background-color: grey;">
+
+                                    <div class="row">
+                                        <div class="col-6">
+                                            Nombre del evento
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="btn btn-info">Información</button>
+                                        </div>
+
+                                        <div class="col-2">
+                                            <button class="btn btn-warning">Pagos</button>
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="btn btn-success">Inscripciones</button>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="container-fluid my-3 py-2 text-black" style="background-color: grey;">
+
+                                    <div class="row">
+                                        <div class="col-6">
+                                            Nombre del evento
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="btn btn-info">Información</button>
+                                        </div>
+
+                                        <div class="col-2">
+                                            <button class="btn btn-warning">Pagos</button>
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="btn btn-success">Inscripciones</button>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="container-fluid my-3 py-2 text-black" style="background-color: grey;">
+
+                                    <div class="row">
+                                        <div class="col-6">
+                                            Nombre del evento
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="btn btn-info">Información</button>
+                                        </div>
+
+                                        <div class="col-2">
+                                            <button class="btn btn-warning">Pagos</button>
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="btn btn-success">Inscripciones</button>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="container-fluid my-3 py-2 text-black" style="background-color: grey;">
+
+                                    <div class="row">
+                                        <div class="col-6">
+                                            Nombre del evento
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="btn btn-info">Información</button>
+                                        </div>
+
+                                        <div class="col-2">
+                                            <button class="btn btn-warning">Pagos</button>
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="btn btn-success">Inscripciones</button>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="container-fluid my-3 py-2 text-black" style="background-color: grey;">
+
+                                    <div class="row">
+                                        <div class="col-6">
+                                            Nombre del evento
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="btn btn-info">Información</button>
+                                        </div>
+
+                                        <div class="col-2">
+                                            <button class="btn btn-warning">Pagos</button>
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="btn btn-success">Inscripciones</button>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="container-fluid my-3 py-2 text-black" style="background-color: grey;">
+
+                                    <div class="row">
+                                        <div class="col-6">
+                                            Nombre del evento
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="btn btn-info">Información</button>
+                                        </div>
+
+                                        <div class="col-2">
+                                            <button class="btn btn-warning">Pagos</button>
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="btn btn-success">Inscripciones</button>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="container-fluid my-3 py-2 text-black" style="background-color: grey;">
+
+                                    <div class="row">
+                                        <div class="col-6">
+                                            Nombre del evento
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="btn btn-info">Información</button>
+                                        </div>
+
+                                        <div class="col-2">
+                                            <button class="btn btn-warning">Pagos</button>
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="btn btn-success">Inscripciones</button>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="container-fluid my-3 py-2 text-black" style="background-color: grey;">
+
+                                    <div class="row">
+                                        <div class="col-6">
+                                            Nombre del evento
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="btn btn-info">Información</button>
+                                        </div>
+
+                                        <div class="col-2">
+                                            <button class="btn btn-warning">Pagos</button>
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="btn btn-success">Inscripciones</button>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="container-fluid my-3 py-2 text-black" style="background-color: grey;">
+
+                                    <div class="row">
+                                        <div class="col-6">
+                                            Nombre del evento
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="btn btn-info">Información</button>
+                                        </div>
+
+                                        <div class="col-2">
+                                            <button class="btn btn-warning">Pagos</button>
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="btn btn-success">Inscripciones</button>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="container-fluid my-3 py-2 text-black" style="background-color: grey;">
+
+                                    <div class="row">
+                                        <div class="col-6">
+                                            Nombre del evento
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="btn btn-info">Información</button>
+                                        </div>
+
+                                        <div class="col-2">
+                                            <button class="btn btn-warning">Pagos</button>
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="btn btn-success">Inscripciones</button>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="container-fluid my-3 py-2 text-black" style="background-color: grey;">
+
+                                    <div class="row">
+                                        <div class="col-6">
+                                            Nombre del evento
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="btn btn-info">Información</button>
+                                        </div>
+
+                                        <div class="col-2">
+                                            <button class="btn btn-warning">Pagos</button>
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="btn btn-success">Inscripciones</button>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="container-fluid my-3 py-2 text-black" style="background-color: grey;">
+
+                                    <div class="row">
+                                        <div class="col-6">
+                                            Nombre del evento
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="btn btn-info">Información</button>
+                                        </div>
+
+                                        <div class="col-2">
+                                            <button class="btn btn-warning">Pagos</button>
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="btn btn-success">Inscripciones</button>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="container-fluid my-3 py-2 text-black" style="background-color: grey;">
+
+                                    <div class="row">
+                                        <div class="col-6">
+                                            Nombre del evento
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="btn btn-info">Información</button>
+                                        </div>
+
+                                        <div class="col-2">
+                                            <button class="btn btn-warning">Pagos</button>
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="btn btn-success">Inscripciones</button>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="container-fluid my-3 py-2 text-black" style="background-color: grey;">
+
+                                    <div class="row">
+                                        <div class="col-6">
+                                            Nombre del evento
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="btn btn-info">Información</button>
+                                        </div>
+
+                                        <div class="col-2">
+                                            <button class="btn btn-warning">Pagos</button>
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="btn btn-success">Inscripciones</button>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="container-fluid my-3 py-2 text-black" style="background-color: grey;">
+
+                                    <div class="row">
+                                        <div class="col-6">
+                                            Nombre del evento
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="btn btn-info">Información</button>
+                                        </div>
+
+                                        <div class="col-2">
+                                            <button class="btn btn-warning">Pagos</button>
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="btn btn-success">Inscripciones</button>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
                             </div>
 
                             <footer class="my-3 sticky-bottom bg-white">
