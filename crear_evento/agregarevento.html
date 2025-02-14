@@ -11,56 +11,47 @@
 <body>
     <div id="wrapper">
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar" style="z-index: 90">
-            <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/RecursosHumanos/Sitio">
-                <div class="sidebar-brand-icon">
-                    <!--NOMBRE DEL SISTEMA ITSON -->
+        <!-- sidebar--ofcanvas -->
+        <div class="offcanvas-lg offcanvas-start bg-gradient-primary" tabindex="-1" aria-labelled="offcanvas"
+            id="offcanvas-sidebar">
+            <div class="offcanvas-body">
+
+                <div class="navbar">
+
+                    <div class="container-fluid">
+                        <a href="#" class="navbar-brand">
+                            <img src="https://www.itson.mx/eventos/cibca/PublishingImages/Paginas/logos/Logo%20ITSON.png"
+                                height="85">
+                        </a>
+
+                        <div class="container-fluid">
+                            <ul class="navbar-nav flex-column">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link text-light">Modulos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link text-light">Usuarios</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link text-light">Pantallas extras</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link text-light">Roles</a>
+                                </li>
+                                <li class="nav-item d-lg-none">
+                                    <a href="#offcanvas-sidebar" class="nav-link text-light" data-bs-toggle="offcanvas"
+                                        role="button" aria-controls="offcanvas-sidebar">Cerrar</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
                 </div>
-            </a>
-            <img height="85" src="/Assets/Img/logo_potros.png">
-            <br>
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/Inicio/Inicio">
-                <div class="sidebar-brand-icon">
-                    <i class="fa fa-home" aria-hidden="true"></i>
-                </div>
-            </a>
-            <div id="menu">
 
-        <li class="nav-item">
-            <a class="nav-link" href="/Modulos/Modulos">
-                <i class="fa fa-folder"></i>
-                <span>Módulos</span>
-            </a>
-            
-
-            <a class="nav-link" href="/Usuarios/Usuarios">
-                <i class="fa fa-folder"></i>
-                <span>Usuarios</span>
-            </a>
-
-            <a class="nav-link" href="/PantallasExtras/PantallaExtras">
-                <i class="fa fa-folder"></i>
-                <span>Pantalla Extras</span>
-            </a>
-
-            <a class="nav-link" href="/RolesUsuarios/Roles">
-            <i class="fa fa-folder"></i>
-            <span>Roles</span>
-        </a>
-        </li>
-
-</div>
-
-        <!-- Divider -->
-        <hr class="sidebar-divider d-none d-md-block">
-
-        <!-- Sidebar Toggler (Sidebar) -->
-        <div class="text-center d-none d-md-inline">
-            <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
         </div>
-
-        </ul>
+        <!-- end of sisdebar-offcanvas/ -->
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -73,8 +64,9 @@
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
                     <!-- Sidebar Toggle (Topbar) -->
-                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                        <i class="fa fa-bars"></i>
+                    <button id="sidebarToggleTop" class="d-lg-none btn me-3" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvas-sidebar" aria-controlls="offcanvas-sidebar">
+                        <span class="navbar-toggler-icon"></span>
                     </button>
 
                     <div class="input-group">
@@ -293,7 +285,7 @@
 
                     <!--Fin Conceptos de banco--> 
                 
-                    <div class="row flex-row-reverse">
+                    <div class="row d-flex justify-content-center mt-4">
                         <input type="button" value="Registrar Evento" class="btn btn-success col-sm-2">
                     </div>
                     
