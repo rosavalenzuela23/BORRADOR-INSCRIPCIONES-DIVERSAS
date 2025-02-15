@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,7 +36,7 @@
                         <div class="container-fluid">
                             <ul class="navbar-nav flex-column">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link text-light">Modulos</a>
+                                    <a href="#" class="nav-link text-light">Módulos</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="#" class="nav-link text-light">Usuarios</a>
@@ -275,14 +274,14 @@
                                 </nav>
                             </div>
 
-                            <!-- modal de ejemplo -->
+                            <!-- modal de ejemplo de la información -->
                             <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
                                 id="avisos-dialog">
                                 <div class="modal-dialog modal-dialog-centered">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Información de los
-                                                eventos</h1>
+                                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Información del
+                                                evento</h1>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                 aria-label="Close"></button>
                                         </div>
@@ -295,421 +294,276 @@
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary"
-                                                data-bs-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary">Understood</button>
+                                                data-bs-dismiss="modal">Cerrar</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- fin del modal de ejemplo -->
+                            <!-- fin del modal de ejemplo de la información -->
 
+                            <!-- modal de ejemplo de la información de pago -->
+                            <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                                id="pagos-dialog">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Pagos del evento</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="container-fluid h-100">
+                                                <div class="row">
+                                                    <button class="btn btn-primary">Procesar</button>
+                                                </div>
+                                                <hr>
+                                                <div class="row">
+                                                    <button class="btn btn-primary">Pagos</button>
+                                                </div>
+                                                <hr>
+                                                <div class="row">
+                                                    <button class="btn btn-primary">Lista</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Cerrar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- fin del modal de ejemplo de la información de pago -->
 
                             <div
                                 class="contenido-registros border border-4 border-primary rounded h-75 overflow-y-auto">
-                                <div class="container-fluid my-3 py-2 text-black" style="background-color: grey;">
+                                <div class="container-fluid my-3 py-2 text-black">
 
-                                    <div class="row">
+                                    <div class="row mb-2" style="background-color: grey;">
+
                                         <div class="col-6">
                                             Nombre del evento
                                         </div>
-                                        <div class="col-2">
-                                            <button class="btn btn-info" data-bs-toggle="modal"
-                                                data-bs-target="#avisos-dialog">
-                                                Información
-                                            </button>
-                                        </div>
-
-                                        <div class="col-2">
-                                            <button class="btn btn-warning">Pagos</button>
-                                        </div>
-                                        <div class="col-2">
-                                            <button class="btn btn-success">Inscripciones</button>
+                                        
+                                        <div class="col-6 d-flex align-items-center justify-content-end">
+                                            <div class="btn-group btn-group-lg" aria-label="Opciones para los eventos">
+                                                <button class="btn btn-info" data-bs-toggle="modal"
+                                                data-bs-target="#avisos-dialog">Información</button>
+                                                <button class="btn btn-warning" data-bs-toggle="modal"
+                                                data-bs-target="#pagos-dialog" >Pagos</button>
+                                                <button class="btn btn-success">Sesiones</button>
+                                            </div>
                                         </div>
 
                                     </div>
 
-                                </div>
-                                <div class="container-fluid my-3 py-2 text-black" style="background-color: grey;">
-
-                                    <div class="row">
+                                    <div class="row mb-2" style="background-color: grey;">
+    
                                         <div class="col-6">
                                             Nombre del evento
                                         </div>
-                                        <div class="col-2">
-                                            <button class="btn btn-info">Información</button>
+                                        
+                                        <div class="col-6 d-flex align-items-center justify-content-end">
+                                            <div class="btn-group btn-group-lg" aria-label="Opciones para los eventos">
+                                                <button class="btn btn-info" data-bs-toggle="modal"
+                                                data-bs-target="#avisos-dialog">Información</button>
+                                                <button class="btn btn-warning" data-bs-toggle="modal"
+                                                data-bs-target="#pagos-dialog" >Pagos</button>
+                                                <button class="btn btn-success">Sesiones</button>
+                                            </div>
                                         </div>
-
-                                        <div class="col-2">
-                                            <button class="btn btn-warning">Pagos</button>
-                                        </div>
-                                        <div class="col-2">
-                                            <button class="btn btn-success">Inscripciones</button>
-                                        </div>
-
+    
                                     </div>
-
-                                </div>
-                                <div class="container-fluid my-3 py-2 text-black" style="background-color: grey;">
-
-                                    <div class="row">
+                                    <div class="row mb-2" style="background-color: grey;">
+    
                                         <div class="col-6">
                                             Nombre del evento
                                         </div>
-                                        <div class="col-2">
-                                            <button class="btn btn-info">Información</button>
+                                        
+                                        <div class="col-6 d-flex align-items-center justify-content-end">
+                                            <div class="btn-group btn-group-lg" aria-label="Opciones para los eventos">
+                                                <button class="btn btn-info" data-bs-toggle="modal"
+                                                data-bs-target="#avisos-dialog">Información</button>
+                                                <button class="btn btn-warning" data-bs-toggle="modal"
+                                                data-bs-target="#pagos-dialog" >Pagos</button>
+                                                <button class="btn btn-success">Sesiones</button>
+                                            </div>
                                         </div>
-
-                                        <div class="col-2">
-                                            <button class="btn btn-warning">Pagos</button>
-                                        </div>
-                                        <div class="col-2">
-                                            <button class="btn btn-success">Inscripciones</button>
-                                        </div>
-
+    
                                     </div>
-
-                                </div>
-                                <div class="container-fluid my-3 py-2 text-black" style="background-color: grey;">
-
-                                    <div class="row">
+                                    <div class="row mb-2" style="background-color: grey;">
+    
                                         <div class="col-6">
                                             Nombre del evento
                                         </div>
-                                        <div class="col-2">
-                                            <button class="btn btn-info">Información</button>
+                                        
+                                        <div class="col-6 d-flex align-items-center justify-content-end">
+                                            <div class="btn-group btn-group-lg" aria-label="Opciones para los eventos">
+                                                <button class="btn btn-info" data-bs-toggle="modal"
+                                                data-bs-target="#avisos-dialog">Información</button>
+                                                <button class="btn btn-warning" data-bs-toggle="modal"
+                                                data-bs-target="#pagos-dialog" >Pagos</button>
+                                                <button class="btn btn-success">Sesiones</button>
+                                            </div>
                                         </div>
-
-                                        <div class="col-2">
-                                            <button class="btn btn-warning">Pagos</button>
-                                        </div>
-                                        <div class="col-2">
-                                            <button class="btn btn-success">Inscripciones</button>
-                                        </div>
-
+    
                                     </div>
-
-                                </div>
-                                <div class="container-fluid my-3 py-2 text-black" style="background-color: grey;">
-
-                                    <div class="row">
+                                    <div class="row mb-2" style="background-color: grey;">
+    
                                         <div class="col-6">
                                             Nombre del evento
                                         </div>
-                                        <div class="col-2">
-                                            <button class="btn btn-info">Información</button>
+                                        
+                                        <div class="col-6 d-flex align-items-center justify-content-end">
+                                            <div class="btn-group btn-group-lg" aria-label="Opciones para los eventos">
+                                                <button class="btn btn-info" data-bs-toggle="modal"
+                                                data-bs-target="#avisos-dialog">Información</button>
+                                                <button class="btn btn-warning" data-bs-toggle="modal"
+                                                data-bs-target="#pagos-dialog" >Pagos</button>
+                                                <button class="btn btn-success">Sesiones</button>
+                                            </div>
                                         </div>
-
-                                        <div class="col-2">
-                                            <button class="btn btn-warning">Pagos</button>
-                                        </div>
-                                        <div class="col-2">
-                                            <button class="btn btn-success">Inscripciones</button>
-                                        </div>
-
+    
                                     </div>
-
-                                </div>
-                                <div class="container-fluid my-3 py-2 text-black" style="background-color: grey;">
-
-                                    <div class="row">
+                                    <div class="row mb-2" style="background-color: grey;">
+    
                                         <div class="col-6">
                                             Nombre del evento
                                         </div>
-                                        <div class="col-2">
-                                            <button class="btn btn-info">Información</button>
+                                        
+                                        <div class="col-6 d-flex align-items-center justify-content-end">
+                                            <div class="btn-group btn-group-lg" aria-label="Opciones para los eventos">
+                                                <button class="btn btn-info" data-bs-toggle="modal"
+                                                data-bs-target="#avisos-dialog">Información</button>
+                                                <button class="btn btn-warning" data-bs-toggle="modal"
+                                                data-bs-target="#pagos-dialog" >Pagos</button>
+                                                <button class="btn btn-success">Sesiones</button>
+                                            </div>
                                         </div>
-
-                                        <div class="col-2">
-                                            <button class="btn btn-warning">Pagos</button>
-                                        </div>
-                                        <div class="col-2">
-                                            <button class="btn btn-success">Inscripciones</button>
-                                        </div>
-
+    
                                     </div>
-
-                                </div>
-                                <div class="container-fluid my-3 py-2 text-black" style="background-color: grey;">
-
-                                    <div class="row">
+                                    <div class="row mb-2" style="background-color: grey;">
+    
                                         <div class="col-6">
                                             Nombre del evento
                                         </div>
-                                        <div class="col-2">
-                                            <button class="btn btn-info">Información</button>
+                                        
+                                        <div class="col-6 d-flex align-items-center justify-content-end">
+                                            <div class="btn-group btn-group-lg" aria-label="Opciones para los eventos">
+                                                <button class="btn btn-info" data-bs-toggle="modal"
+                                                data-bs-target="#avisos-dialog">Información</button>
+                                                <button class="btn btn-warning" data-bs-toggle="modal"
+                                                data-bs-target="#pagos-dialog" >Pagos</button>
+                                                <button class="btn btn-success">Sesiones</button>
+                                            </div>
                                         </div>
-
-                                        <div class="col-2">
-                                            <button class="btn btn-warning">Pagos</button>
-                                        </div>
-                                        <div class="col-2">
-                                            <button class="btn btn-success">Inscripciones</button>
-                                        </div>
-
+    
                                     </div>
-
-                                </div>
-                                <div class="container-fluid my-3 py-2 text-black" style="background-color: grey;">
-
-                                    <div class="row">
+                                    <div class="row mb-2" style="background-color: grey;">
+    
                                         <div class="col-6">
                                             Nombre del evento
                                         </div>
-                                        <div class="col-2">
-                                            <button class="btn btn-info">Información</button>
+                                        
+                                        <div class="col-6 d-flex align-items-center justify-content-end">
+                                            <div class="btn-group btn-group-lg" aria-label="Opciones para los eventos">
+                                                <button class="btn btn-info" data-bs-toggle="modal"
+                                                data-bs-target="#avisos-dialog">Información</button>
+                                                <button class="btn btn-warning" data-bs-toggle="modal"
+                                                data-bs-target="#pagos-dialog" >Pagos</button>
+                                                <button class="btn btn-success">Sesiones</button>
+                                            </div>
                                         </div>
-
-                                        <div class="col-2">
-                                            <button class="btn btn-warning">Pagos</button>
-                                        </div>
-                                        <div class="col-2">
-                                            <button class="btn btn-success">Inscripciones</button>
-                                        </div>
-
+    
                                     </div>
-
-                                </div>
-                                <div class="container-fluid my-3 py-2 text-black" style="background-color: grey;">
-
-                                    <div class="row">
+                                    <div class="row mb-2" style="background-color: grey;">
+    
                                         <div class="col-6">
                                             Nombre del evento
                                         </div>
-                                        <div class="col-2">
-                                            <button class="btn btn-info">Información</button>
+                                        
+                                        <div class="col-6 d-flex align-items-center justify-content-end">
+                                            <div class="btn-group btn-group-lg" aria-label="Opciones para los eventos">
+                                                <button class="btn btn-info" data-bs-toggle="modal"
+                                                data-bs-target="#avisos-dialog">Información</button>
+                                                <button class="btn btn-warning" data-bs-toggle="modal"
+                                                data-bs-target="#pagos-dialog" >Pagos</button>
+                                                <button class="btn btn-success">Sesiones</button>
+                                            </div>
                                         </div>
-
-                                        <div class="col-2">
-                                            <button class="btn btn-warning">Pagos</button>
-                                        </div>
-                                        <div class="col-2">
-                                            <button class="btn btn-success">Inscripciones</button>
-                                        </div>
-
+    
                                     </div>
-
-                                </div>
-                                <div class="container-fluid my-3 py-2 text-black" style="background-color: grey;">
-
-                                    <div class="row">
+                                    <div class="row mb-2" style="background-color: grey;">
+    
                                         <div class="col-6">
                                             Nombre del evento
                                         </div>
-                                        <div class="col-2">
-                                            <button class="btn btn-info">Información</button>
+                                        
+                                        <div class="col-6 d-flex align-items-center justify-content-end">
+                                            <div class="btn-group btn-group-lg" aria-label="Opciones para los eventos">
+                                                <button class="btn btn-info" data-bs-toggle="modal"
+                                                data-bs-target="#avisos-dialog">Información</button>
+                                                <button class="btn btn-warning" data-bs-toggle="modal"
+                                                data-bs-target="#pagos-dialog" >Pagos</button>
+                                                <button class="btn btn-success">Sesiones</button>
+                                            </div>
                                         </div>
-
-                                        <div class="col-2">
-                                            <button class="btn btn-warning">Pagos</button>
-                                        </div>
-                                        <div class="col-2">
-                                            <button class="btn btn-success">Inscripciones</button>
-                                        </div>
-
+    
                                     </div>
-
-                                </div>
-                                <div class="container-fluid my-3 py-2 text-black" style="background-color: grey;">
-
-                                    <div class="row">
+                                    <div class="row mb-2" style="background-color: grey;">
+    
                                         <div class="col-6">
                                             Nombre del evento
                                         </div>
-                                        <div class="col-2">
-                                            <button class="btn btn-info">Información</button>
+                                        
+                                        <div class="col-6 d-flex align-items-center justify-content-end">
+                                            <div class="btn-group btn-group-lg" aria-label="Opciones para los eventos">
+                                                <button class="btn btn-info" data-bs-toggle="modal"
+                                                data-bs-target="#avisos-dialog">Información</button>
+                                                <button class="btn btn-warning" data-bs-toggle="modal"
+                                                data-bs-target="#pagos-dialog" >Pagos</button>
+                                                <button class="btn btn-success">Sesiones</button>
+                                            </div>
                                         </div>
-
-                                        <div class="col-2">
-                                            <button class="btn btn-warning">Pagos</button>
-                                        </div>
-                                        <div class="col-2">
-                                            <button class="btn btn-success">Inscripciones</button>
-                                        </div>
-
+    
                                     </div>
-
-                                </div>
-                                <div class="container-fluid my-3 py-2 text-black" style="background-color: grey;">
-
-                                    <div class="row">
+                                    <div class="row mb-2" style="background-color: grey;">
+    
                                         <div class="col-6">
                                             Nombre del evento
                                         </div>
-                                        <div class="col-2">
-                                            <button class="btn btn-info">Información</button>
+                                        
+                                        <div class="col-6 d-flex align-items-center justify-content-end">
+                                            <div class="btn-group btn-group-lg" aria-label="Opciones para los eventos">
+                                                <button class="btn btn-info" data-bs-toggle="modal"
+                                                data-bs-target="#avisos-dialog">Información</button>
+                                                <button class="btn btn-warning" data-bs-toggle="modal"
+                                                data-bs-target="#pagos-dialog" >Pagos</button>
+                                                <button class="btn btn-success">Sesiones</button>
+                                            </div>
                                         </div>
-
-                                        <div class="col-2">
-                                            <button class="btn btn-warning">Pagos</button>
-                                        </div>
-                                        <div class="col-2">
-                                            <button class="btn btn-success">Inscripciones</button>
-                                        </div>
-
+    
                                     </div>
-
-                                </div>
-                                <div class="container-fluid my-3 py-2 text-black" style="background-color: grey;">
-
-                                    <div class="row">
+                                    <div class="row mb-2" style="background-color: grey;">
+    
                                         <div class="col-6">
                                             Nombre del evento
                                         </div>
-                                        <div class="col-2">
-                                            <button class="btn btn-info">Información</button>
+                                        
+                                        <div class="col-6 d-flex align-items-center justify-content-end">
+                                            <div class="btn-group btn-group-lg" aria-label="Opciones para los eventos">
+                                                <button class="btn btn-info" data-bs-toggle="modal"
+                                                data-bs-target="#avisos-dialog">Información</button>
+                                                <button class="btn btn-warning" data-bs-toggle="modal"
+                                                data-bs-target="#pagos-dialog" >Pagos</button>
+                                                <button class="btn btn-success">Sesiones</button>
+                                            </div>
                                         </div>
-
-                                        <div class="col-2">
-                                            <button class="btn btn-warning">Pagos</button>
-                                        </div>
-                                        <div class="col-2">
-                                            <button class="btn btn-success">Inscripciones</button>
-                                        </div>
-
+    
                                     </div>
-
+                                    
                                 </div>
-                                <div class="container-fluid my-3 py-2 text-black" style="background-color: grey;">
-
-                                    <div class="row">
-                                        <div class="col-6">
-                                            Nombre del evento
-                                        </div>
-                                        <div class="col-2">
-                                            <button class="btn btn-info">Información</button>
-                                        </div>
-
-                                        <div class="col-2">
-                                            <button class="btn btn-warning">Pagos</button>
-                                        </div>
-                                        <div class="col-2">
-                                            <button class="btn btn-success">Inscripciones</button>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                                <div class="container-fluid my-3 py-2 text-black" style="background-color: grey;">
-
-                                    <div class="row">
-                                        <div class="col-6">
-                                            Nombre del evento
-                                        </div>
-                                        <div class="col-2">
-                                            <button class="btn btn-info">Información</button>
-                                        </div>
-
-                                        <div class="col-2">
-                                            <button class="btn btn-warning">Pagos</button>
-                                        </div>
-                                        <div class="col-2">
-                                            <button class="btn btn-success">Inscripciones</button>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                                <div class="container-fluid my-3 py-2 text-black" style="background-color: grey;">
-
-                                    <div class="row">
-                                        <div class="col-6">
-                                            Nombre del evento
-                                        </div>
-                                        <div class="col-2">
-                                            <button class="btn btn-info">Información</button>
-                                        </div>
-
-                                        <div class="col-2">
-                                            <button class="btn btn-warning">Pagos</button>
-                                        </div>
-                                        <div class="col-2">
-                                            <button class="btn btn-success">Inscripciones</button>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                                <div class="container-fluid my-3 py-2 text-black" style="background-color: grey;">
-
-                                    <div class="row">
-                                        <div class="col-6">
-                                            Nombre del evento
-                                        </div>
-                                        <div class="col-2">
-                                            <button class="btn btn-info">Información</button>
-                                        </div>
-
-                                        <div class="col-2">
-                                            <button class="btn btn-warning">Pagos</button>
-                                        </div>
-                                        <div class="col-2">
-                                            <button class="btn btn-success">Inscripciones</button>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                                <div class="container-fluid my-3 py-2 text-black" style="background-color: grey;">
-
-                                    <div class="row">
-                                        <div class="col-6">
-                                            Nombre del evento
-                                        </div>
-                                        <div class="col-2">
-                                            <button class="btn btn-info">Información</button>
-                                        </div>
-
-                                        <div class="col-2">
-                                            <button class="btn btn-warning">Pagos</button>
-                                        </div>
-                                        <div class="col-2">
-                                            <button class="btn btn-success">Inscripciones</button>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                                <div class="container-fluid my-3 py-2 text-black" style="background-color: grey;">
-
-                                    <div class="row">
-                                        <div class="col-6">
-                                            Nombre del evento
-                                        </div>
-                                        <div class="col-2">
-                                            <button class="btn btn-info">Información</button>
-                                        </div>
-
-                                        <div class="col-2">
-                                            <button class="btn btn-warning">Pagos</button>
-                                        </div>
-                                        <div class="col-2">
-                                            <button class="btn btn-success">Inscripciones</button>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                                <div class="container-fluid my-3 py-2 text-black" style="background-color: grey;">
-
-                                    <div class="row">
-                                        <div class="col-6">
-                                            Nombre del evento
-                                        </div>
-                                        <div class="col-2">
-                                            <button class="btn btn-info">Información</button>
-                                        </div>
-
-                                        <div class="col-2">
-                                            <button class="btn btn-warning">Pagos</button>
-                                        </div>
-                                        <div class="col-2">
-                                            <button class="btn btn-success">Inscripciones</button>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
+                                
                             </div>
 
                             <footer class="my-3 sticky-bottom bg-white">
