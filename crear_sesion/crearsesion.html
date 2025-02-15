@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,59 +9,51 @@
     <link rel="stylesheet" href="https://intranet-dev.itson.edu.mx/templateITSON/Administrativos/css/sb-admin-2.css">
     <script src="../public/js/bootstrap.min.js"></script>
 </head>
+
 <body>
     <div id="wrapper">
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar" style="z-index: 90">
-            <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/RecursosHumanos/Sitio">
-                <div class="sidebar-brand-icon">
-                    <!--NOMBRE DEL SISTEMA ITSON -->
+        <!-- sidebar--ofcanvas -->
+        <div class="offcanvas-lg offcanvas-start bg-gradient-primary" tabindex="-1" aria-labelled="offcanvas"
+            id="offcanvas-sidebar">
+            <div class="offcanvas-body">
+
+                <div class="navbar">
+
+                    <div class="container-fluid">
+                        <a href="#" class="navbar-brand">
+                            <img src="https://www.itson.mx/eventos/cibca/PublishingImages/Paginas/logos/Logo%20ITSON.png"
+                                height="85">
+                        </a>
+
+                        <div class="container-fluid">
+                            <ul class="navbar-nav flex-column">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link text-light">Modulos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link text-light">Usuarios</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link text-light">Pantallas extras</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link text-light">Roles</a>
+                                </li>
+                                <li class="nav-item d-lg-none">
+                                    <a href="#offcanvas-sidebar" class="nav-link text-light" data-bs-toggle="offcanvas"
+                                        role="button" aria-controls="offcanvas-sidebar">Cerrar</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
                 </div>
-            </a>
-            <img height="85" src="/Assets/Img/logo_potros.png">
-            <br>
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/Inicio/Inicio">
-                <div class="sidebar-brand-icon">
-                    <i class="fa fa-home" aria-hidden="true"></i>
-                </div>
-            </a>
-            <div id="menu">
 
-        <li class="nav-item">
-            <a class="nav-link" href="/Modulos/Modulos">
-                <i class="fa fa-folder"></i>
-                <span>Módulos</span>
-            </a>
-            
-
-            <a class="nav-link" href="/Usuarios/Usuarios">
-                <i class="fa fa-folder"></i>
-                <span>Usuarios</span>
-            </a>
-
-            <a class="nav-link" href="/PantallasExtras/PantallaExtras">
-                <i class="fa fa-folder"></i>
-                <span>Pantalla Extras</span>
-            </a>
-
-            <a class="nav-link" href="/RolesUsuarios/Roles">
-            <i class="fa fa-folder"></i>
-            <span>Roles</span>
-        </a>
-        </li>
-
-</div>
-
-        <!-- Divider -->
-        <hr class="sidebar-divider d-none d-md-block">
-
-        <!-- Sidebar Toggler (Sidebar) -->
-        <div class="text-center d-none d-md-inline">
-            <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
         </div>
-
-        </ul>
+        <!-- end of sisdebar-offcanvas/ -->
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -73,8 +66,9 @@
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
                     <!-- Sidebar Toggle (Topbar) -->
-                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                        <i class="fa fa-bars"></i>
+                    <button id="sidebarToggleTop" class="d-lg-none btn me-3" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvas-sidebar" aria-controlls="offcanvas-sidebar">
+                        <span class="navbar-toggler-icon"></span>
                     </button>
 
                     <div class="input-group">
@@ -84,13 +78,16 @@
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style=" padding: 5px 0">
+                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                style=" padding: 5px 0">
                                 <i class="fa fa-bell fa-lg" style="color:#006db6 !important;"></i>
                                 <!-- Counter - Alerts -->
                                 <span class="badge badge-danger badge-counter">3+</span>
                             </a>
                             <!-- Dropdown - Alerts -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="alertsDropdown">
                                 <h6 class="dropdown-header">
                                     Alerts Center
                                 </h6>
@@ -119,11 +116,13 @@
                         <div class="topbar-divider d-none d-sm-block"></div>
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
-                            <a id="ImgEmpleado" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a id="ImgEmpleado" class="nav-link dropdown-toggle" href="#" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span id="spnNombreEmpleado" class="mr-2 d-none d-lg-inline text-gray-600 small"></span>
                             </a>
                             <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Cerrar sesión
@@ -137,12 +136,12 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                <center>
-                <h2>Bienvenido</h2>
-                </center>
-                <!--Contenedor del formulario /// etiqueta que junta al formulario fue borrada, pero será agregada-->
-               
-                    <!--Inicio formulario general-->    
+                    <center>
+                        <h2>Bienvenido</h2>
+                    </center>
+                    <!--Contenedor del formulario /// etiqueta que junta al formulario fue borrada, pero será agregada-->
+
+                    <!--Inicio formulario general-->
 
                     <!--Seleccionar evento para la sesión-->
                     <div>
@@ -162,13 +161,14 @@
                         </select>
                     </div>
 
-                    <hr/>
+                    <hr />
 
                     <!--Sección de fechas de inicio de evento y fin de evento-->
                     <div class="row">
                         <div class="col-sm-6">
                             <label for="fechaInicio" class="form-label">Inicio De Evento</label>
-                            <input type="text" name="fechaInicio" id="" class="form-control" value="10/06/2025" disabled>
+                            <input type="text" name="fechaInicio" id="" class="form-control" value="10/06/2025"
+                                disabled>
                         </div>
                         <div class="col-sm-6">
                             <label for="" class="form-label">Fin De Evento</label>
@@ -176,51 +176,52 @@
                         </div>
                     </div>
 
-                    
+
 
                     <!--Sección días que se impartirá la sesión-->
                     <div class="d-flex justify-content-center row mt-4">
                         <label for="" class="form-label col-sm-6 mr-2">Dias:</label>
                         <div class="col-sm-6">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">L</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                            <label class="form-check-label" for="inlineCheckbox2">M</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
-                            <label class="form-check-label" for="inlineCheckbox3">MI</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option4">
-                            <label class="form-check-label" for="inlineCheckbox2">j</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option5">
-                            <label class="form-check-label" for="inlineCheckbox2">V</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option6">
-                            <label class="form-check-label" for="inlineCheckbox2">S</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option7">
-                            <label class="form-check-label" for="inlineCheckbox2">D</label>
-                        </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                <label class="form-check-label" for="inlineCheckbox1">L</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                                <label class="form-check-label" for="inlineCheckbox2">M</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                                <label class="form-check-label" for="inlineCheckbox3">MI</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option4">
+                                <label class="form-check-label" for="inlineCheckbox2">j</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option5">
+                                <label class="form-check-label" for="inlineCheckbox2">V</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option6">
+                                <label class="form-check-label" for="inlineCheckbox2">S</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option7">
+                                <label class="form-check-label" for="inlineCheckbox2">D</label>
+                            </div>
                         </div>
 
                     </div>
 
-                    <hr/>
+                    <hr />
 
                     <!--Sección fecha de inicio y fin de sesión-->
                     <div class="row">
                         <div class="col-sm-6">
                             <label for="fechaInicio" class="form-label">Inicio De Sesión</label>
-                            <input type="text" name="fechaInicio" id="" class="form-control" value="10/06/2025" disabled>
+                            <input type="text" name="fechaInicio" id="" class="form-control" value="10/06/2025"
+                                disabled>
                         </div>
                         <div class="col-sm-6">
                             <label for="" class="form-label">Fin De Sesion</label>
@@ -239,7 +240,7 @@
                             <input type="time" name="" id="" class="form-control">
                         </div>
                     </div>
-                    
+
                     <!--Se-->
                     <div>
                         <label for="" class="form-label">Evento:</label>
@@ -258,15 +259,15 @@
                         </select>
                     </div>
                     <!--Fin formulario general-->
-                    
-                    
 
-                  
-                
+
+
+
+
                     <div class="row flex-row-reverse mt-4">
                         <input type="button" value="Registrar Sesión" class="btn btn-success col-sm-2">
                     </div>
-                    
+
 
 
                 </div>
@@ -287,8 +288,8 @@
         </div>
         <!-- End of Content Wrapper -->
     </div>
-    
+
 </body>
 
-   
+
 </html>
